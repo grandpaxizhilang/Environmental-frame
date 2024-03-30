@@ -11,8 +11,17 @@ Object.defineProperties(Navigator.prototype, {
 Navigator.prototype.webdriver = false;
 Navigator.prototype.plugins = [];
 Navigator.prototype.mimeTypes = [];
+Navigator.prototype.language = "zh-CN"
 Navigator.prototype.languages = ["zh-CN","en","en-GB","en-US"];
 Navigator.prototype.userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0'
+Navigator.prototype.vendor = 'Google Inc.'
+
+
+//网站自己新定义的方法
+Navigator.prototype.javaEnabled = function javaEnabled(){
+    debugger;
+    return false;
+};catchvm.func_set_natvie(Navigator.prototype.javaEnabled)
 
 
 navigator = {};

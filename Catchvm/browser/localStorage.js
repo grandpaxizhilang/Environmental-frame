@@ -9,6 +9,8 @@ Object.defineProperties(Storage.prototype, {
 });
 ///////////////////////////////////////////////////////////////
 
+Storage.prototype['hexin-v'] = NaN;
+
 Storage.prototype.length = 0;
 Storage.prototype.clear = function clear(){
     debugger;

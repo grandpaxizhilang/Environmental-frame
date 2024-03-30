@@ -17,6 +17,10 @@ catchvm.memory.HTMLElements['canvas'] = function(){
     HTMLCanvasElement.prototype.height = 150;
     HTMLCanvasElement.prototype.width = 300;
 
+    HTMLCanvasElement.prototype.getContext = function getContext(contextType){
+        debugger;
+    };catchvm.func_set_natvie(HTMLCanvasElement.prototype.getContext)
+
     ///////////////////////////////////////////////
     Canvas.__proto__ = HTMLCanvasElement.prototype;
     return Canvas;

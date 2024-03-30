@@ -12,8 +12,12 @@ location = {};
 location.__proto__ = Location.prototype;
 
 
-location.href = 'https://www.pinduoduo.com/home/medical/'
+location.href = 'https://www.iwencai.com/unifiedmobile/?q=%E4%BB%8A%E6%97%A5%E9%AB%98%E5%BC%80&queryType=info#/result?question=%E4%BB%8A%E6%97%A5%E9%AB%98%E5%BC%80&queryType=info&token=&condition=&short_condition='
 location.port = ''
+location.hostname = 'www.iwencai.com'
+location.host = 'www.iwencai.com'
+location.protocol = 'https:'
+
 
 ///////////////////////////////////////////////////////////////
 

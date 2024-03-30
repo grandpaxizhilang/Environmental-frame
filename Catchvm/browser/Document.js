@@ -8,9 +8,9 @@ Object.defineProperties(Document.prototype, {
     }
 });
 ///////////////////////////////////////////////////////////////
-Document.prototype.URL = 'https://www.pinduoduo.com/home/medical/'
-Document.prototype.cookie = '_nano_fp=XpmolpdYnpTbnqTal9_ZxZjOIWA6rklQOv3THMR7; api_uid=rBUUx2YGhpI4ICeayxyGAg=='
-Document.prototype.referrer = 'https://www.pinduoduo.com/'
+Document.prototype.URL = ''
+// Document.prototype.cookie = ''
+Document.prototype.referrer = ''
 
 
 
@@ -28,6 +28,15 @@ Document.prototype.createElement = function createElement(tagName){
     }
     return catchvm.proxy(catchvm.memory.HTMLElements[tagname]())
 };catchvm.func_set_natvie(Document.prototype.createElement);
+
+
+Document.prototype.getElementsByTagName = function getElementsByTagName(name){
+    debugger;
+    return [{}]
+};catchvm.func_set_natvie(Document.prototype.getElementsByTagName);
+
+
+
 
 
 //未实现

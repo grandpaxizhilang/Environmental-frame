@@ -1,6 +1,6 @@
 
 window = this;
-
+delete global;
 
 var Window = function Window(){
     throw new TypeError("Illegal constructor");
@@ -21,6 +21,11 @@ window.setTimeout = function setTimeout(){
     return 0;
 };catchvm.func_set_natvie(window.setTimeout)
 
+window.setInterval = function setInterval(x,y){
+    return x();
+};catchvm.func_set_natvie(window.setInterval)
+
+
 
 Window.prototype.PERSISTENT = 1;
 Window.prototype.TEMPORARY = 0;
@@ -29,6 +34,10 @@ Window.prototype.TEMPORARY = 0;
 window.outerHeight = 834;
 window.outerWidth = 1536;
 window.chrome = catchvm.proxy(class chrome{})
+// window.CHAMELEON_LOADED = true;
+
+
+
 window.DeviceOrientationEvent = function DeviceOrientationEvent(){
     debugger;
 };catchvm.func_set_natvie(window.DeviceOrientationEvent);

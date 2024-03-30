@@ -11,6 +11,9 @@ Object.defineProperties(Node.prototype, {
 Node.prototype.ATTRIBUTE_NODE = 2;
 
 
+Node.prototype.appendChild = function appendChild(aChild){
+    debugger;
+};catchvm.func_set_natvie(Node.prototype.appendChild)
 
 // for (var property_ in Node.prototype) {
 //     if(!(typeof Node.prototype[property_] === 'function')){       
