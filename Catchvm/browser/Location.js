@@ -12,11 +12,18 @@ location = {};
 location.__proto__ = Location.prototype;
 
 
-location.href = 'https://www.iwencai.com/unifiedmobile/?q=%E4%BB%8A%E6%97%A5%E9%AB%98%E5%BC%80&queryType=info#/result?question=%E4%BB%8A%E6%97%A5%E9%AB%98%E5%BC%80&queryType=info&token=&condition=&short_condition='
+location.href = 'https://passport.yhd.com/passport/login_input.do'
 location.port = ''
 location.hostname = 'www.iwencai.com'
 location.host = 'www.iwencai.com'
 location.protocol = 'https:'
+
+//网站自己新定义的方法和属性(可删除)↓↓↓↓↓↓↓↓↓↓
+location.pathname = '/passport/login_input.do';
+
+//网站自己新定义的方法和属性(可删除)↑↑↑↑↑↑↑↑↑↑
+
+
 
 
 ///////////////////////////////////////////////////////////////

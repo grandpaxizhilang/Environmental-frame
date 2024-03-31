@@ -25,6 +25,12 @@ window.setInterval = function setInterval(x,y){
     return x();
 };catchvm.func_set_natvie(window.setInterval)
 
+window.clearTimeout = function clearTimeout(id){
+    debugger;
+};catchvm.func_set_natvie(window.clearTimeout)
+
+
+
 
 
 Window.prototype.PERSISTENT = 1;
@@ -33,6 +39,9 @@ Window.prototype.TEMPORARY = 0;
 
 window.outerHeight = 834;
 window.outerWidth = 1536;
+window.innerWidth = 236;
+window.innerHeight = 726;
+window.devicePixelRatio = 1.25;
 window.chrome = catchvm.proxy(class chrome{})
 // window.CHAMELEON_LOADED = true;
 

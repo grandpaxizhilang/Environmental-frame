@@ -10,7 +10,11 @@ Object.defineProperties(Screen.prototype, {
 ///////////////////////////////////////////////////////////////
 Screen.prototype.availHeight = 834;
 Screen.prototype.availWidth = 1536;
-
+Screen.prototype.availLeft = 0;
+Screen.prototype.availTop = 0;
+Screen.prototype.width = 1536;
+Screen.prototype.height = 864;
+Screen.prototype.colorDepth = 24;
 
 
 screen = {};

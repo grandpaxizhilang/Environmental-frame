@@ -14,8 +14,8 @@ HTMLImageElement.prototype.__proto__ = HTMLElement.prototype;
 catchvm.memory.HTMLElements['image'] = function(){
     var image = new(function(){});
     ///////////////////////////////////////////////
-
-    
+    HTMLImageElement.prototype.width = 100;
+    HTMLImageElement.prototype.height = 100;
     
     ///////////////////////////////////////////////
     image.__proto__ = HTMLImageElement.prototype;

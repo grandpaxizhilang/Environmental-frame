@@ -23,21 +23,26 @@ function run(config,func_text) {
     code += fs.readFileSync(`${__dirname}/browser/Event.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/UIEvent.js`) + "\r\n"
 
+ 
     code += fs.readFileSync(`${__dirname}/browser/WindowProperties.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Node.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/NodeList.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Element.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/HTMLElement.js`) + "\r\n"
 
+
+    code += fs.readFileSync(`${__dirname}/browser/XMLHttpRequestEventTarget.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/XMLHttpRequest.js`) + "\r\n"
 
     code += fs.readFileSync(`${__dirname}/browser/Window.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Location.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Navigator.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/History.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Screen.js`) + "\r\n"
-    code += fs.readFileSync(`${__dirname}/browser/localStorage.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Storage.js`) + "\r\n"
 
-
-
+    
+    code += fs.readFileSync(`${__dirname}/browser/MediaDevices.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Plugin.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/MimeType.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/PluginArray.js`) + "\r\n"
@@ -49,6 +54,8 @@ function run(config,func_text) {
 
     code += fs.readFileSync(`${__dirname}/browser/Document.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/HTMLDocument.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Image.js`) + "\r\n"
+    
 
     code += 'debugger;' + '\r\n'
     return code

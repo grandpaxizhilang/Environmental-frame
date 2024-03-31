@@ -12,7 +12,7 @@ var catchvmcode = catchvm.run({
 `);
 
 
-const codefile = `${__dirname}/code1.js`;
+const codefile = `${__dirname}/code2.js`;
 const vm = new VM();
 const script = new VMScript(catchvmcode + fs.readFileSync(codefile),`${__dirname}/NOWDEBUG.js`);
 debugger;

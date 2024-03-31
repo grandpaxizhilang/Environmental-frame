@@ -8,6 +8,9 @@ Object.defineProperties(History.prototype, {
     }
 });
 ///////////////////////////////////////////////////////////////
+History.prototype.length = 2;
+
+
 History.prototype.back = function back(){
     debugger;
 };catchvm.func_set_natvie(History.prototype.back)

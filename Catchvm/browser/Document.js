@@ -9,7 +9,7 @@ Object.defineProperties(Document.prototype, {
 });
 ///////////////////////////////////////////////////////////////
 Document.prototype.URL = ''
-// Document.prototype.cookie = ''
+Document.prototype.cookie = 'msessionid=A4XUZY1S7BWE336YSF1H8A79MEHSNVQTNFA4; rURL=http%3A%2F%2Fwww.yhd.com; _c_id=15wxuyz6hyjg6qz308x17105025987926imu; _s_id=dmjmxw82bcxqh16kmb417105025987928oru; jab-requestId=""'
 Document.prototype.referrer = ''
 
 
@@ -35,6 +35,10 @@ Document.prototype.getElementsByTagName = function getElementsByTagName(name){
     return [{}]
 };catchvm.func_set_natvie(Document.prototype.getElementsByTagName);
 
+Document.prototype.querySelectorAll = function querySelectorAll(selectors){
+    debugger;
+    return nodelist;
+};catchvm.func_set_natvie(Document.prototype.querySelectorAll);
 
 
 
