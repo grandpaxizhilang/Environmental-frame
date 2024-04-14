@@ -11,19 +11,19 @@ Object.defineProperties(MediaDevices.prototype, {
 MediaDevices.prototype.ondevicechange = null;
 
 
-MediaDevices.prototype.enumerateDevices = function enumerateDevices(){debugger;};catchvm.func_set_natvie(MediaDevices.prototype.enumerateDevices)
+MediaDevices.prototype.enumerateDevices = function enumerateDevices(){
+    debugger;
+};catchvm.func_set_natvie(MediaDevices.prototype.enumerateDevices);
+
 MediaDevices.prototype.getDisplayMedia = function getDisplayMedia(){debugger;};catchvm.func_set_natvie(MediaDevices.prototype.getDisplayMedia)
 MediaDevices.prototype.getSupportedConstraints = function getSupportedConstraints(){debugger;};catchvm.func_set_natvie(MediaDevices.prototype.getSupportedConstraints)
 MediaDevices.prototype.setCaptureHandleConfig = function setCaptureHandleConfig(){debugger;};catchvm.func_set_natvie(MediaDevices.prototype.setCaptureHandleConfig)
 
 
-
- 
 ///////////////////////////////////////////////////////////////
-navigator.mediaDevices = {};
-navigator.mediaDevices.__proto__ = MediaDevices.prototype;
+catchvm.memory.mediaDevices = {};
+catchvm.memory.mediaDevices.__proto__ = MediaDevices.prototype;
 
 MediaDevices.prototype.__proto__ = EventTarget.prototype;
 
-
-navigator.mediaDevices = catchvm.proxy(navigator.mediaDevices);
+catchvm.memory.mediaDevices = catchvm.proxy(catchvm.memory.mediaDevices);

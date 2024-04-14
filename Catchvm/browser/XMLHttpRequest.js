@@ -10,7 +10,7 @@ Object.defineProperties(XMLHttpRequest.prototype, {
 });
 ///////////////////////////////////////////////////////////////
 XMLHttpRequest.prototype.open = function open(method,url,async = true,user = '',password = ''){
-    debugger;
+    // debugger;
     this.method = method;
     this.url = url;
     this.async = async;
@@ -20,11 +20,11 @@ XMLHttpRequest.prototype.open = function open(method,url,async = true,user = '',
 
 XMLHttpRequest.prototype.send = function send(body = null){
     this.body = body;
-    debugger;
+    // debugger;
 };catchvm.func_set_natvie(XMLHttpRequest.prototype.open);
 
 
 
 ///////////////////////////////////////////////////////////////
 
-XMLHttpRequest.prototype.__proto__ = XMLHttpRequestEventTarget.prototype;
+// XMLHttpRequest.prototype.__proto__ = XMLHttpRequestEventTarget.prototype;

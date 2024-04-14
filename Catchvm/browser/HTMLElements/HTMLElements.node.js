@@ -17,8 +17,14 @@ function GetCode(){
     code += fs.readFileSync(`${__dirname}/HTMLLinkElement.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/HTMLImageElement.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/HTMLAudioElement.js`) + "\r\n"
-
+    code += fs.readFileSync(`${__dirname}/HTMLOptionElement.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/HTMLParagraphElement.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/HTMLHeadingElement.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/HTMLSpanElement.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/HTMLUListElement.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/HTMLLIElement.js`) + "\r\n"
     
+
     return code
 }
     

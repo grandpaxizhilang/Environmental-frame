@@ -14,8 +14,9 @@ HTMLLabelElement.prototype.__proto__ = HTMLElement.prototype;
 catchvm.memory.HTMLElements['label'] = function(){
     var label = new(function(){});
     ///////////////////////////////////////////////
-
-
+    label.tagName = 'label'.toUpperCase()
+    label.childelement = []
+    label.father_element = null
 
     ///////////////////////////////////////////////
     label.__proto__ = HTMLLabelElement.prototype;

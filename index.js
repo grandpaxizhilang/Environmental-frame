@@ -7,12 +7,16 @@ var catchvmcode = catchvm.run({
     proxy:true
 },
 `
-    catchvm.AddPlugin({description:"Portable Document Format" ,filename:"internal-pdf-viewer",name:"PDF Viewer",MimeTypes:[{description: "Portable Document Format",suffixes: "pdf",type: "application/pdf1"},{description: "Portable Document Format1",suffixes: "pdf",type: "text/pdf3"}]});
-    catchvm.AddPlugin({description:"Portable Document Format" ,filename:"internal-pdf-viewer",name:"PDF Viewer3",MimeTypes:[{description: "Portable Document Format",suffixes: "pdf",type: "application/pdf2"},{description: "Portable Document Format4",suffixes: "pdf",type: "text/pdf"}]})
+catchvm.AddPlugin({description:"Portable Document Format" ,filename:"internal-pdf-viewer",name:"PDF Viewer",MimeTypes:[{description: "Portable Document Format",suffixes: "pdf",type: "application/pdf"},{description: "Portable Document Format",suffixes: "pdf",type:"text/pdf"}]});
+catchvm.AddPlugin({description:"Portable Document Format" ,filename:"internal-pdf-viewer",name:"Chrome PDF Viewer",MimeTypes:[{description: "Portable Document Format",suffixes: "pdf",type: "application/pdf"},{description: "Portable Document Format",suffixes: "pdf",type: "text/pdf"}]});
+catchvm.AddPlugin({description:"Portable Document Format" ,filename:"internal-pdf-viewer",name:"Chromium PDF Viewer",MimeTypes:[{description: "Portable Document Format",suffixes: "pdf",type: "application/pdf"},{description: "Portable Document Format",suffixes: "pdf",type:"text/pdf"}]});
+catchvm.AddPlugin({description:"Portable Document Format" ,filename:"internal-pdf-viewer",name:"Microsoft Edge PDF Viewer",MimeTypes:[{description: "Portable Document Format",suffixes: "pdf",type: "application/pdf"},{description: "Portable Document Format",suffixes: "pdf",type:"text/pdf"}]});
+catchvm.AddPlugin({description:"Portable Document Format" ,filename:"internal-pdf-viewer",name:"WebKit built-in PDF",MimeTypes:[{description: "Portable Document Format",suffixes: "pdf",type: "application/pdf"},{description: "Portable Document Format",suffixes: "pdf",type:"text/pdf"}]});
+    
 `);
 
 
-const codefile = `${__dirname}/code2.js`;
+const codefile = `${__dirname}/code.js`;
 const vm = new VM();
 const script = new VMScript(catchvmcode + fs.readFileSync(codefile),`${__dirname}/NOWDEBUG.js`);
 debugger;

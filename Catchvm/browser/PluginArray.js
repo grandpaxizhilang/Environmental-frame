@@ -81,5 +81,3 @@ if(catchvm.memory.PluginArray.temp != undefined){
 catchvm.memory.PluginArray._.__proto__ = PluginArray.prototype;
 catchvm.memory.PluginArray._ =  catchvm.proxy(catchvm.memory.PluginArray._);
 
-
-navigator.plugins = catchvm.memory.PluginArray._;

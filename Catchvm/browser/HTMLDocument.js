@@ -10,7 +10,6 @@ Object.defineProperties(HTMLDocument.prototype, {
 ///////////////////////////////////////////////////////////////
 
 
-
 document = {};
 document.__proto__ = HTMLDocument.prototype;
 
@@ -23,11 +22,7 @@ for (var property_ in HTMLDocument.prototype) {
         });
     }  
 }
-
-
-
 ///////////////////////////////////////////////////////////////
-
 
 HTMLDocument.prototype.__proto__ = Document.prototype;
 document = catchvm.proxy(document);

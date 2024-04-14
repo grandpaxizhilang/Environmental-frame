@@ -20,10 +20,53 @@ function run(config,func_text) {
 
     //引入浏览器相关
     code += fs.readFileSync(`${__dirname}/browser/EventTarget.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/DOMException.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Event.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/UIEvent.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/TextMetrics.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/CanvasRenderingContext2D.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/MouseEvent.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Option.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/BaseAudioContext.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/AudioContext.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/External.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/WebGLRenderingContext.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/WebGL2RenderingContext.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/ImageBitmapRenderingContext.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Scheduling.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/UserActivation.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Geolocation.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/NetworkInformation.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Bluetooth.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Clipboard.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/CredentialsContainer.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Keyboard.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/NavigatorManagedData.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/StorageManager.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/ServiceWorkerContainer.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/VirtualKeyboard.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/WakeLock.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Ink.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/HID.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/LockManager.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/MediaCapabilities.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/MediaSession.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Permissions.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Presentation.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Serial.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/GPU.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/USB.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/WindowControlsOverlay.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/XRSystem.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/NavigatorUAData.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/CSSStyleDeclaration.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/DOMImplementation.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/WebGLDebugRendererInfo.js`) + "\r\n"
+    
 
- 
+
+
+    
     code += fs.readFileSync(`${__dirname}/browser/WindowProperties.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Node.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/NodeList.js`) + "\r\n"
@@ -33,6 +76,13 @@ function run(config,func_text) {
 
     code += fs.readFileSync(`${__dirname}/browser/XMLHttpRequestEventTarget.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/XMLHttpRequest.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/MediaDevices.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Plugin.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/MimeType.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/PluginArray.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/MimeTypeArray.js`) + "\r\n"
+
+
 
     code += fs.readFileSync(`${__dirname}/browser/Window.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Location.js`) + "\r\n"
@@ -42,22 +92,18 @@ function run(config,func_text) {
     code += fs.readFileSync(`${__dirname}/browser/Storage.js`) + "\r\n"
 
     
-    code += fs.readFileSync(`${__dirname}/browser/MediaDevices.js`) + "\r\n"
-    code += fs.readFileSync(`${__dirname}/browser/Plugin.js`) + "\r\n"
-    code += fs.readFileSync(`${__dirname}/browser/MimeType.js`) + "\r\n"
-    code += fs.readFileSync(`${__dirname}/browser/PluginArray.js`) + "\r\n"
-    code += fs.readFileSync(`${__dirname}/browser/MimeTypeArray.js`) + "\r\n"
-
-
     
     code += htmlelements.GetCode() + '\r\n'
 
     code += fs.readFileSync(`${__dirname}/browser/Document.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/HTMLDocument.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Image.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/ImageData.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/RegExp.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Object.js`) + "\r\n"
     
 
-    code += 'debugger;' + '\r\n'
+    code += '/////////////////////////////////////////////////////////////////\r\nconsole.clear()\r\ndebugger;' + '\r\n'
     return code
 }
 

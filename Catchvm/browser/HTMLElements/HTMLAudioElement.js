@@ -14,8 +14,9 @@ HTMLAudioElement.prototype.__proto__ = HTMLElement.prototype;
 catchvm.memory.HTMLElements['audio'] = function(){
     var audio = new(function(){});
     ///////////////////////////////////////////////
-
-    
+    audio.tagName = 'audio'.toUpperCase()
+    audio.childelement = []
+    audio.father_element = null
     
     ///////////////////////////////////////////////
     audio.__proto__ = HTMLAudioElement.prototype;

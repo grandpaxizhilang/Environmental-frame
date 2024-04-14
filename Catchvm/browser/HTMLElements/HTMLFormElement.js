@@ -14,7 +14,9 @@ HTMLFormElement.prototype.__proto__ = HTMLElement.prototype;
 catchvm.memory.HTMLElements['form'] = function(){
     var form = new(function(){});
     ///////////////////////////////////////////////
-
+    form.tagName = 'form'.toUpperCase()
+    form.childelement = []
+    form.father_element = null
 
 
     ///////////////////////////////////////////////

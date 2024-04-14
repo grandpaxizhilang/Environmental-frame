@@ -8,14 +8,22 @@ Object.defineProperties(HTMLImageElement.prototype, {
     }
 });
 
+
+
+
+
 HTMLImageElement.prototype.__proto__ = HTMLElement.prototype;
 
 
-catchvm.memory.HTMLElements['image'] = function(){
+catchvm.memory.HTMLElements['image'] = function(width, height){
     var image = new(function(){});
     ///////////////////////////////////////////////
-    HTMLImageElement.prototype.width = 100;
-    HTMLImageElement.prototype.height = 100;
+    image.tagName = 'image'.toUpperCase()
+    image.childelement = []
+    image.father_element = null
+
+    HTMLImageElement.prototype.width = width;
+    HTMLImageElement.prototype.height = height;
     
     ///////////////////////////////////////////////
     image.__proto__ = HTMLImageElement.prototype;

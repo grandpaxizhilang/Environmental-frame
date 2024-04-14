@@ -1,8 +1,5 @@
 var UIEvent = function UIEvent(type){
-    var UIevent = new (function(){});
-    UIevent.__proto__ = UIEvent.prototype;
-    UIevent.type = type;
-    return catchvm.proxy(UIevent);
+    return catchvm.memory.Events['uievent'](type);
 };catchvm.func_set_natvie(UIEvent);
 Object.defineProperties(UIEvent.prototype, {
     [Symbol.toStringTag]: {
@@ -21,4 +18,21 @@ UIEvent.prototype.which = 0;
 ///////////////////////////////////////////////////////////////
 UIEvent.prototype.__proto__ = Event.prototype;
 
+catchvm.memory.Events['uievent'] = function(type){
+    var uievent = {};
+    ////////////////////////////////////////////////
+    if(type != undefined){
+        uievent.type = type;
+    }else{
+        uievent.type = ''
+    }
+
+    /////////////////////////////////////////////////
+    uievent.__proto__ = UIEvent.prototype;
+    return catchvm.proxy(uievent);
+};
+
+catchvm.memory.Events['uievents'] = function(type){
+    return catchvm.memory.Events['uievent'](type);
+};
 

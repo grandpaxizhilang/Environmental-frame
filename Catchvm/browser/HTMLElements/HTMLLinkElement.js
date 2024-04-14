@@ -14,8 +14,9 @@ HTMLLinkElement.prototype.__proto__ = HTMLElement.prototype;
 catchvm.memory.HTMLElements['link'] = function(){
     var link = new(function(){});
     ///////////////////////////////////////////////
-
-    
+    link.tagName = 'link'.toUpperCase()
+    link.childelement = []
+    link.father_element = null
     
     ///////////////////////////////////////////////
     link.__proto__ = HTMLLinkElement.prototype;

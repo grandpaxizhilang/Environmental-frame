@@ -12,14 +12,15 @@ location = {};
 location.__proto__ = Location.prototype;
 
 
-location.href = 'https://passport.yhd.com/passport/login_input.do'
+location.href = 'https://www.toutiao.com/?wid=1713081298266'
 location.port = ''
-location.hostname = 'www.iwencai.com'
-location.host = 'www.iwencai.com'
+location.hostname = ''
+location.host = 'www.xiaohongshu.com'
 location.protocol = 'https:'
+location.search = 
 
 //网站自己新定义的方法和属性(可删除)↓↓↓↓↓↓↓↓↓↓
-location.pathname = '/passport/login_input.do';
+location.pathname = '';
 
 //网站自己新定义的方法和属性(可删除)↑↑↑↑↑↑↑↑↑↑
 

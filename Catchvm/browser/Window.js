@@ -1,6 +1,7 @@
 
 window = this;
 delete global;
+delete Buffer;
 
 var Window = function Window(){
     throw new TypeError("Illegal constructor");
@@ -13,8 +14,10 @@ Object.defineProperties(Window.prototype, {
 });
 
 ///////////////////////////////////////////////////////////////
+
+
 window.setTimeout = function setTimeout(){
-    //x有可能是方法，也有可能是文本
+    // x有可能是方法，也有可能是文本
     typeof(x) === 'function'?x():undefined;
     typeof(x) === 'string'?x():undefined;
     //正确的应该 生成uuid（每个id都不一样） 并且保存到内存中
@@ -30,23 +33,35 @@ window.clearTimeout = function clearTimeout(id){
 };catchvm.func_set_natvie(window.clearTimeout)
 
 
-
-
-
 Window.prototype.PERSISTENT = 1;
 Window.prototype.TEMPORARY = 0;
 
 
+
+
 window.outerHeight = 834;
 window.outerWidth = 1536;
-window.innerWidth = 236;
-window.innerHeight = 726;
+window.innerWidth = 0;
+window.innerHeight = 0;
 window.devicePixelRatio = 1.25;
 window.chrome = catchvm.proxy(class chrome{})
+window.name = ''
+
+
+
+
+
+window.alert = function alert(){
+    debugger;
+    console.log(arguments)
+};catchvm.func_set_natvie(window.alert)
 // window.CHAMELEON_LOADED = true;
 
 
 
+window.CSSRule = function CSSRule(){
+    debugger;
+};catchvm.func_set_natvie(window.CSSRule);
 window.DeviceOrientationEvent = function DeviceOrientationEvent(){
     debugger;
 };catchvm.func_set_natvie(window.DeviceOrientationEvent);

@@ -47,7 +47,7 @@ Plugin.prototype.length = '';
 Plugin.prototype.name = '';
 
 Plugin.prototype.item = function item(index){
-    debugger;
+    // debugger;
     return this[index];
 };catchvm.func_set_natvie(Plugin.prototype.item);
 

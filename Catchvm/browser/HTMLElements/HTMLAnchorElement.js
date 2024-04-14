@@ -12,15 +12,16 @@ Object.defineProperties(HTMLAnchorElement.prototype, {
 HTMLAnchorElement.prototype.__proto__ = HTMLElement.prototype;
 
 
-catchvm.memory.HTMLElements['anchor'] = function(){
-    var anchor = new(function(){});
+catchvm.memory.HTMLElements['a'] = function(){
+    var a = new(function(){});
     ///////////////////////////////////////////////
-
-    
+    a.tagName = 'a'.toUpperCase()
+    a.childelement = []
+    a.father_element = null
     
     ///////////////////////////////////////////////
-    anchor.__proto__ = HTMLAnchorElement.prototype;
-    return anchor;
+    a.__proto__ = HTMLAnchorElement.prototype;
+    return a;
 }
 
 

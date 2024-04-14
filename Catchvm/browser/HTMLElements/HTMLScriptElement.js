@@ -15,8 +15,9 @@ HTMLScriptElement.prototype.__proto__ = HTMLElement.prototype;
 catchvm.memory.HTMLElements['script'] = function(){
     var script = new(function(){});
     ///////////////////////////////////////////////
-  
-    
+    script.tagName = 'script'.toUpperCase()
+    script.childelement = []
+    script.father_element = null
     
     ///////////////////////////////////////////////
     script.__proto__ = HTMLDivElement.prototype;

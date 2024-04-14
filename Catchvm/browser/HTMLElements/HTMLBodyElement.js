@@ -14,6 +14,10 @@ HTMLBodyElement.prototype.__proto__ = HTMLElement.prototype;
 catchvm.memory.HTMLElements['body'] = function(){
     var body = new(function(){});
     ///////////////////////////////////////////////
+    body.tagName = 'body'.toUpperCase()
+    body.childelement = []
+    body.father_element = null
+
     HTMLBodyElement.prototype.aLink = ''
     HTMLBodyElement.prototype.background = ''
     HTMLBodyElement.prototype.bgColor = ''

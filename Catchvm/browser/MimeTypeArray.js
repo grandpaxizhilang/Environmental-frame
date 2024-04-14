@@ -58,10 +58,10 @@ MimeTypeArray.prototype.__defineGetter__('length', function () {
 
 catchvm.memory.MimeTypeArray._ = {};
 
-if(navigator.plugins != undefined){
+if(catchvm.memory.PluginArray._ != undefined){
     var count = 0;
-    for(let i = 0;i < navigator.plugins.length;i++){
-        var mimeArray = navigator.plugins[i];
+    for(let i = 0;i < catchvm.memory.PluginArray._.length;i++){
+        var mimeArray = catchvm.memory.PluginArray._[i];
         for(let k = 0;k < mimeArray.length;k++){
             if(catchvm.memory.MimeTypeArray._[mimeArray[k].type] == undefined){
                 catchvm.memory.MimeTypeArray._[count] = mimeArray[k];
@@ -78,4 +78,4 @@ if(navigator.plugins != undefined){
 catchvm.memory.MimeTypeArray._.__proto__ = MimeTypeArray.prototype
 catchvm.memory.MimeTypeArray._ =  catchvm.proxy(catchvm.memory.MimeTypeArray._);
 
-navigator.mimeTypes = catchvm.memory.MimeTypeArray._;
+
