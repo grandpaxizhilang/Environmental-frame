@@ -12,10 +12,10 @@ location = {};
 location.__proto__ = Location.prototype;
 
 
-location.href = 'https://www.toutiao.com/?wid=1713081298266'
+location.href = ''
 location.port = ''
 location.hostname = ''
-location.host = 'www.xiaohongshu.com'
+location.host = ''
 location.protocol = 'https:'
 location.search = 
 
