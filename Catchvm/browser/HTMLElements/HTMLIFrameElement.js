@@ -17,6 +17,7 @@ catchvm.memory.HTMLElements['iframe'] = function(){
     iframe.tagName = 'iframe'.toUpperCase()
     iframe.childelement = []
     iframe.father_element = null
+    iframe.contentWindow = null
 
     ///////////////////////////////////////////////
     iframe.__proto__ = HTMLIFrameElement.prototype;

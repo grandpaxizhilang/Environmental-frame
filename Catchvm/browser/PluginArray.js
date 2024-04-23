@@ -42,6 +42,9 @@ Object.defineProperties(PluginArray.prototype, {
 PluginArray.prototype.length = '';
 
 PluginArray.prototype.item = function item(index){
+    if(index == 4294967296){
+        return navigator.plugins[0]
+    }
     debugger;
     return this[index];
 };catchvm.func_set_natvie(PluginArray.prototype.item)

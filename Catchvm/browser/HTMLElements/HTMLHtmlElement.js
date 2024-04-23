@@ -17,6 +17,9 @@ catchvm.memory.HTMLElements['html'] = function(){
     html.tagName = 'html'.toUpperCase()
     html.childelement = []
     html.father_element = null
+    html.clientHeight = 726
+    html.clientWidth = 1467
+    
 
     ///////////////////////////////////////////////
     html.__proto__ = HTMLHtmlElement.prototype;

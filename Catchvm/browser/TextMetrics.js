@@ -19,10 +19,10 @@ TextMetrics.prototype.fontBoundingBoxDescent = '';
 TextMetrics.prototype.hangingBaseline = '';
 TextMetrics.prototype.ideographicBaseline = '';
 
-
+ 
 ///////////////////////////////////////////////////////////////
 
-var textMetrics = {};
-textMetrics.__proto__ = TextMetrics.prototype;
+catchvm.memory.textMetrics = {};
+catchvm.memory.textMetrics.__proto__ = TextMetrics.prototype;
 
-textMetrics = catchvm.proxy(textMetrics);
+catchvm.memory.textMetrics = catchvm.proxy(catchvm.memory.textMetrics);

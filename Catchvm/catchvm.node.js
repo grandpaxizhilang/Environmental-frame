@@ -62,16 +62,42 @@ function run(config,func_text) {
     code += fs.readFileSync(`${__dirname}/browser/CSSStyleDeclaration.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/DOMImplementation.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/WebGLDebugRendererInfo.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/HTMLAllCollection.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/DOMTokenList.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Performance.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/ScreenOrientation.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/CSSRule.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/CSSStyleRule.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/StyleSheet.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/CSSRuleList.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/CSSGroupingRule.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/CSSConditionRule.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/CSSMediaRule.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/MessageEvent.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Selection.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/CustomEvent.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/TimeRanges.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/DOMParser.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/AbstractRange.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Range.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/DataTransfer.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/URL.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Blob.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/TextDecoder.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/TextEncoder.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/IDBFactory.js`) + "\r\n"
     
 
 
-
-    
     code += fs.readFileSync(`${__dirname}/browser/WindowProperties.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Node.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/NodeList.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Attr.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/NamedNodeMap.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Element.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/HTMLElement.js`) + "\r\n"
+
+
 
 
     code += fs.readFileSync(`${__dirname}/browser/XMLHttpRequestEventTarget.js`) + "\r\n"
@@ -81,7 +107,13 @@ function run(config,func_text) {
     code += fs.readFileSync(`${__dirname}/browser/MimeType.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/PluginArray.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/MimeTypeArray.js`) + "\r\n"
-
+    code += fs.readFileSync(`${__dirname}/browser/CharacterData.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Text.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/CDATASection.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/SVGElement.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/DocumentType.js`) + "\r\n"
+    
+    
 
 
     code += fs.readFileSync(`${__dirname}/browser/Window.js`) + "\r\n"
@@ -95,6 +127,7 @@ function run(config,func_text) {
     
     code += htmlelements.GetCode() + '\r\n'
 
+    code += fs.readFileSync(`${__dirname}/browser/Audio.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Document.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/HTMLDocument.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/Image.js`) + "\r\n"

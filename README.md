@@ -38,6 +38,18 @@
 
 - 补充CanvasRenderingContext2D接口部分方法
 
+### 2023-04-23
+
+- 简单实现NamedNodeMap、Attr、TextEncoder、TextDecoder、IDBFactory、HTMLAllCollection、DOMTokenList、ScreenOrientation、Performance、Audio、Selection、CustomEvent、DocumentType、TimeRanges、DOMParser、Range、AbstractRange、DataTransfer、CDATASection、Text、CharacterData、CSSStyleRule、CSSRule、StyleSheet、SVGElement、CSSRuleList、CSSMediaRule、CSSConditionRule、CSSGroupingRule、MessageEvent接口
+
+- 补充了window接口的部分属性和方法
+
+- 完善Node接口中removeChild方法
+
+- 实现完善Blob、URL接口
+
+- 完善TextEncoder接口中的encode方法
+
 # 目前存在的问题
 
 - 大部分接口中对于原型上的获取会报错的问题没有实现

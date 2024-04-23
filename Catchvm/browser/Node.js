@@ -38,8 +38,32 @@ Node.prototype.appendChild = function appendChild(aChild){
 };catchvm.func_set_natvie(Node.prototype.appendChild)
 
 Node.prototype.removeChild = function removeChild(Child){
-    console.log(arguments)
-    // debugger;
+    console.log(arguments);
+    var flag_ = false;
+    if(this == Child){
+        debugger;
+        flag_ = true;
+    }{
+        for(let i;i < this.childelement.length;i++){
+            flag_ = true;
+            if(this.childelement[i] == Child){
+                flag_ =false;
+                break;
+            }
+        }
+    }
+    
+    if(flag_){
+        debugger;
+        throw new DOMException('Failed to execute \'removeChild\' on \'Node\': The node to be removed is not a child of this node.')
+    }
+
+
+    var index = this.childelement.indexOf(Child);
+    this.childelement.splice(index, 1);
+    Child.father_element = null;
+    return Child
+
 };catchvm.func_set_natvie(Node.prototype.removeChild)
 
 

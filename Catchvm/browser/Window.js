@@ -12,8 +12,8 @@ Object.defineProperties(Window.prototype, {
         configurable: true
     }
 });
-
 ///////////////////////////////////////////////////////////////
+
 
 
 window.setTimeout = function setTimeout(){
@@ -38,30 +38,108 @@ Window.prototype.TEMPORARY = 0;
 
 
 
+window.top = {}
+window.self = window
 
 window.outerHeight = 834;
 window.outerWidth = 1536;
-window.innerWidth = 0;
-window.innerHeight = 0;
+window.innerWidth = 1482;
+window.innerHeight = 726;
+window.screenX = 0;
+window.screenY = 0
+window.pageYOffset = 0;
 window.devicePixelRatio = 1.25;
 window.chrome = catchvm.proxy(class chrome{})
 window.name = ''
+window.screenTop = 0
+window.screenLeft = 0
+window.length = 2
+window.fetchHooked = true
+window.wDomains = ["appsec-mobile.sec.test.sankuai.com","appsec-mobile.meituan.com","msp.meituan.com","pikachu.mykeeta.com"]
+window.wPaths = []
+window.xhrHooked = true
+window.xhrHook = true
+
+window[0] = window
+
+//↓↓↓↓↓↓↓↓↓↓↓↓↓可删↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓↓
+
+window.onwheelx = {"_Ax": "0X21"}
+
+//↑↑↑↑↑↑↑↑↑↑↑↑↑可删↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
 
+window.SVGUnitTypes = function SVGUnitTypes(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.SVGUnitTypes)
+
+window.SVGNumber = function SVGNumber(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.SVGNumber)
+
+window.SVGGElement = function SVGGElement(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.SVGGElement)
+
+window.NodeFilter = function NodeFilter(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.NodeFilter)
+
+window.CSSPageRule = function CSSPageRule(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.CSSPageRule)
+
+window.SVGPointList = function SVGPointList(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.SVGPointList)
+
+window.SVGMatrix = function SVGMatrix(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.SVGMatrix)
+
+window.SVGAngle = function SVGAngle(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.SVGAngle)
+
+window.MediaError = function MediaError(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.MediaError)
+
+window.SVGRect = function SVGRect(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.SVGRect)
+
+window.SVGElement = function SVGElement(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.SVGElement)
 
 
 
 window.alert = function alert(){
-    debugger;
     console.log(arguments)
+    debugger;
 };catchvm.func_set_natvie(window.alert)
 // window.CHAMELEON_LOADED = true;
 
-
-
-window.CSSRule = function CSSRule(){
+window.fetch = function fetch(){
     debugger;
-};catchvm.func_set_natvie(window.CSSRule);
+};catchvm.func_set_natvie(window.fetch);
+window.requestAnimationFrame = function requestAnimationFrame(){
+    debugger;
+    return 
+};catchvm.func_set_natvie(window.requestAnimationFrame);
+
 window.DeviceOrientationEvent = function DeviceOrientationEvent(){
     debugger;
 };catchvm.func_set_natvie(window.DeviceOrientationEvent);

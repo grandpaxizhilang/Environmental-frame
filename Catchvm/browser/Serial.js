@@ -1,4 +1,3 @@
-
 var Serial = function Serial(){
     throw new TypeError("Illegal constructor");
 };catchvm.func_set_natvie(Serial)

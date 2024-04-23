@@ -15,7 +15,10 @@ Screen.prototype.availTop = 0;
 Screen.prototype.width = 1536;
 Screen.prototype.height = 864;
 Screen.prototype.colorDepth = 24;
+Screen.prototype.pixelDepth = 24;
 
+
+Screen.prototype.orientation = catchvm.memory.orientation
 
 screen = {};
 screen.__proto__ = Screen.prototype;

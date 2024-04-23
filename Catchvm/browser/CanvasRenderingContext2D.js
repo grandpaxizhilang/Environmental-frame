@@ -11,7 +11,7 @@ Object.defineProperties(CanvasRenderingContext2D.prototype, {
 
 CanvasRenderingContext2D.prototype.measureText = function measureText(text){
     debugger;
-    return textMetrics;
+    return catchvm.memory.textMetrics;
 };catchvm.func_set_natvie(CanvasRenderingContext2D.prototype.measureText);
 
 CanvasRenderingContext2D.prototype.fillText = function fillText(){
@@ -31,3 +31,4 @@ catchvm.memory.canvasRenderingContext2D = {};
 catchvm.memory.canvasRenderingContext2D.__proto__ = CanvasRenderingContext2D.prototype;
 
 catchvm.memory.canvasRenderingContext2D = catchvm.proxy(catchvm.memory.canvasRenderingContext2D);
+ 

@@ -10,6 +10,9 @@ Object.defineProperties(Element.prototype, {
 ///////////////////////////////////////////////////////////////
 
 Element.prototype.tagName = ''
+Element.prototype.classList = catchvm.memory.domTokenList
+Element.prototype.attributes = catchvm.memory.namedNodeMap
+
 
 
 

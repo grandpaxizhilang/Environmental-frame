@@ -10,6 +10,7 @@ Object.defineProperties(EventTarget.prototype, {
 ///////////////////////////////////////////////////////////////
 
 EventTarget.prototype.addEventListener = function addEventListener(type,listener){
+    console.log(arguments)
     // debugger;
     if(catchvm.memory.listeners[type] === undefined){
         catchvm.memory.listeners[type] = [];
