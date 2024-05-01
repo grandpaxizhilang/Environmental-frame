@@ -6,7 +6,7 @@
 
 ### 2024-03-30
 
-- 简单实现HTMLScriptElement、HTMLAnchorElement、HTMLButtonElement、HTMLInputElement、HTMLLabelElement、HTMLLinkElement、HTMLImageElement、HTMLAudioElement接口
+- 简单实现`HTMLScriptElement`、`HTMLAnchorElement`、`HTMLButtonElement`、`HTMLInputElement`、`HTMLLabelElement`、`HTMLLinkElement`、`HTMLImageElement`、`HTMLAudioElement`接口
 
 ### 2024-03-31
 
