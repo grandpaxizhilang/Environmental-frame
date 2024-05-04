@@ -8,6 +8,10 @@ Object.defineProperties(IDBFactory.prototype, {
     }
 });
 ///////////////////////////////////////////////////////////////
+IDBFactory.prototype.open = function open(){
+    // debugger;
+    return catchvm.memory.IDBOpenDBRequest
+};catchvm.func_set_natvie(IDBFactory.prototype.open)
 
 
 ///////////////////////////////////////////////////////////////

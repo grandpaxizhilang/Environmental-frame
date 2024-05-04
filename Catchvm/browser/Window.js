@@ -32,13 +32,16 @@ window.clearTimeout = function clearTimeout(id){
     debugger;
 };catchvm.func_set_natvie(window.clearTimeout)
 
+window.clearInterval = function clearInterval(id){
+    debugger;
+};catchvm.func_set_natvie(window.clearInterval)
 
 Window.prototype.PERSISTENT = 1;
 Window.prototype.TEMPORARY = 0;
 
 
 
-window.top = {}
+window.top = window
 window.self = window
 
 window.outerHeight = 834;
@@ -47,7 +50,8 @@ window.innerWidth = 1482;
 window.innerHeight = 726;
 window.screenX = 0;
 window.screenY = 0
-window.pageYOffset = 0;
+window.pageYOffset = 205.60000610351562;
+window.pageXOffset = 0
 window.devicePixelRatio = 1.25;
 window.chrome = catchvm.proxy(class chrome{})
 window.name = ''
@@ -59,6 +63,12 @@ window.wDomains = ["appsec-mobile.sec.test.sankuai.com","appsec-mobile.meituan.c
 window.wPaths = []
 window.xhrHooked = true
 window.xhrHook = true
+window._sdkGlueVersionMap = {
+    "sdkGlueVersion": "1.0.0.51",
+    "bdmsVersion": "1.0.1.5",
+    "captchaVersion": "4.0.2"
+}
+
 
 window[0] = window
 
@@ -68,6 +78,12 @@ window.onwheelx = {"_Ax": "0X21"}
 
 //↑↑↑↑↑↑↑↑↑↑↑↑↑可删↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑↑
 
+
+
+window.webkitRequestFileSystem = function webkitRequestFileSystem(){
+    console.log(arguments)
+    debugger;
+};catchvm.func_set_natvie(window.webkitRequestFileSystem)
 
 window.SVGUnitTypes = function SVGUnitTypes(){
     console.log(arguments)
@@ -136,7 +152,7 @@ window.fetch = function fetch(){
     debugger;
 };catchvm.func_set_natvie(window.fetch);
 window.requestAnimationFrame = function requestAnimationFrame(){
-    debugger;
+    // debugger;
     return 
 };catchvm.func_set_natvie(window.requestAnimationFrame);
 

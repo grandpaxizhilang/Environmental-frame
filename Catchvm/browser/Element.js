@@ -16,6 +16,13 @@ Element.prototype.attributes = catchvm.memory.namedNodeMap
 
 
 
+Element.prototype.getElementsByTagName = function getElementsByTagName(tagName){
+    
+    console.log(arguments)
+    // debugger;
+    return catchvm.memory.htmlAllCollection;
+};catchvm.func_set_natvie(Element.prototype.getElementsByTagName)
+
 Element.prototype.getAttribute = function getAttribute(attributeName){
     console.log(arguments)
     // debugger;

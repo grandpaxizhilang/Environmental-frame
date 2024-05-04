@@ -23,6 +23,7 @@ function GetCode(){
     code += fs.readFileSync(`${__dirname}/HTMLSpanElement.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/HTMLUListElement.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/HTMLLIElement.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/HTMLMetaElement .js`) + "\r\n"
     
 
     return code

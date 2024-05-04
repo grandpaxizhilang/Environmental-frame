@@ -9,23 +9,29 @@ Object.defineProperties(Document.prototype, {
 });
 ///////////////////////////////////////////////////////////////
 Document.prototype.URL = ''
-Document.prototype.cookie = '_lxsdk_cuid=18f05113f90c8-05772e5fb860bf-4c657b58-144000-18f05113f90c8; _lxsdk=18f05113f90c8-05772e5fb860bf-4c657b58-144000-18f05113f90c8; WEBDFPID=v5665v9549745097zu90z4vz2zx80v1781u94885wuu97958xww3y164-2029136968009-1713776967432UCGMISKfd79fef3d01d5e9aadc18ccd4d0c95071901; _hc.v=25d77bda-2e35-2b2f-19fc-f242534b1eb6.1713777023; qruuid=62704cfd-d1e4-492a-abc3-24e7c8094838; ll=7fd06e815b796be3df069dec7836c3df; s_ViewType=10; fspop=test; cy=4; cye=guangzhou'
-Document.prototype.referrer = 'https://www.dianping.com/guangzhou/ch10/o2'
+Document.prototype.cookie = ''
+Document.prototype.referrer = ''
 Document.prototype.documentElement = catchvm.proxy(catchvm.memory.HTMLElements['html']())
-Document.prototype.body = catchvm.memory.HTMLElements['body']()
+Document.prototype.body = catchvm.proxy(catchvm.memory.HTMLElements['body']())
+Document.prototype.head = catchvm.proxy(catchvm.memory.HTMLElements['head']())
+Document.prototype.characterSet = 'UTF-8'
+Document.prototype.charset = 'UTF-8'
 
 
 
 Document.prototype.all = catchvm.memory.htmlAllCollection
-catchvm.memory.documentcount = 0
-Object.defineProperty(Document.prototype, "all", {
-    get: function (){
-        return [undefined, undefined, catchvm.memory.htmlAllCollection][catchvm.memory.documentcount++]
-    }
-})
+// catchvm.memory.documentcount = 0
+// Object.defineProperty(Document.prototype, "all", {
+//     get: function (){
+//         return [undefined, undefined, catchvm.memory.htmlAllCollection][catchvm.memory.documentcount++]
+//     }
+// })
 
 
 
+Document.prototype.exitFullscreen = function exitFullscreen(){
+    debugger;
+};catchvm.func_set_natvie(Document.prototype.exitFullscreen);
 
 Document.prototype.getElementsByClassName = function getElementsByClassName(){
     console.log(arguments)
@@ -55,6 +61,10 @@ Document.prototype.createElement = function createElement(tagName){
 
 
 Document.prototype.getElementsByTagName = function getElementsByTagName(name){
+    if(name == 'meta'){
+        return catchvm.memory.meta
+    }
+
     console.log(arguments)
     debugger;
     return catchvm.memory.htmlAllCollection

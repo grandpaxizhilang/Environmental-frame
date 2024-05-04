@@ -85,6 +85,10 @@ function run(config,func_text) {
     code += fs.readFileSync(`${__dirname}/browser/Blob.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/TextDecoder.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/TextEncoder.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/URLSearchParams.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/Crypto.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/IDBRequest.js`) + "\r\n"
+    code += fs.readFileSync(`${__dirname}/browser/IDBOpenDBRequest.js`) + "\r\n"
     code += fs.readFileSync(`${__dirname}/browser/IDBFactory.js`) + "\r\n"
     
 

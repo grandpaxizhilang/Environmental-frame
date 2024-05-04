@@ -13,7 +13,7 @@ catchvm.AddPlugin({description:"Portable Document Format" ,filename:"internal-pd
 catchvm.AddPlugin({description:"Portable Document Format" ,filename:"internal-pdf-viewer",name:"Microsoft Edge PDF Viewer",MimeTypes:[{description: "Portable Document Format",suffixes: "pdf",type: "application/pdf"},{description: "Portable Document Format",suffixes: "pdf",type:"text/pdf"}]});
 catchvm.AddPlugin({description:"Portable Document Format" ,filename:"internal-pdf-viewer",name:"WebKit built-in PDF",MimeTypes:[{description: "Portable Document Format",suffixes: "pdf",type: "application/pdf"},{description: "Portable Document Format",suffixes: "pdf",type:"text/pdf"}]});
     
-`);
+`); 
 
 
 const codefile = `${__dirname}/code.js`;

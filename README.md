@@ -38,7 +38,7 @@
 
 - 补充`CanvasRenderingContext2D`接口部分方法
 
-### 2023-04-23
+### 2024-04-23
 
 - 简单实现`NamedNodeMap`、`Attr`、`TextEncoder`、`TextDecoder`、`IDBFactory`、`HTMLAllCollection`、`DOMTokenList`、`ScreenOrientation`、`Performance`、`Audio`、`Selection`、`CustomEvent`、`DocumentType`、`TimeRanges`、`DOMParser`、`Range`、`AbstractRange`、`DataTransfer`、`CDATASection`、`Text`、`CharacterData`、`CSSStyleRule`、`CSSRule`、`StyleSheet`、`SVGElement`、`CSSRuleList`、`CSSMediaRule`、`CSSConditionRule`、`CSSGroupingRule`、`MessageEvent`接口
 
@@ -49,6 +49,14 @@
 - 实现完善`Blob`、`URL`接口
 
 - 完善`TextEncoder`接口中的encode方法
+
+### 2024-05-04
+
+- 简单实现`Crypto`、`HTMLMetaElement` 、`IDBOpenDBRequest`、`IDBRequest`接口
+
+- 收录简单吐环境代码
+
+- 补充部分接口中的属性和方法
 
 # 目前存在的问题
 

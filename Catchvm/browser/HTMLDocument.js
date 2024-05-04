@@ -28,3 +28,7 @@ for (var property_ in HTMLDocument.prototype) {
 HTMLDocument.prototype.__proto__ = Document.prototype;
 document = catchvm.proxy(document);
 
+Object.defineProperty(window, 'document', {
+    configurable : false,
+    enumerable: true
+  });

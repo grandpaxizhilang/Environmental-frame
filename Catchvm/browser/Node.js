@@ -9,6 +9,8 @@ Object.defineProperties(Node.prototype, {
 });
 ///////////////////////////////////////////////////////////////
 Node.prototype.ATTRIBUTE_NODE = 2;
+Node.prototype.parentNode = ''
+
 
 
 Node.prototype.appendChild = function appendChild(aChild){

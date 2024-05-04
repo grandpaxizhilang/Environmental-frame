@@ -9,12 +9,12 @@ Object.isFrozen = function isFrozen(obj){
 
 
 catchvm.memory.assign = Object.assign
-Object.assign = function assign(target, source){
+Object.assign = function assign(target, ...source){
 
 
-    console.log(arguments)
+    console.log(target,source)
     debugger;
-    return catchvm.memory.assign(target, source)
+    return catchvm.memory.assign(target, ...source)
 }
 
 
@@ -69,7 +69,7 @@ Object.getOwnPropertyDescriptor = function getOwnPropertyDescriptor(obj, prop){
 
 
     console.log(arguments)
-    debugger;
+    // debugger;
     return catchvm.memory.getOwnPropertyDescriptor(obj, prop)
 };catchvm.func_set_natvie(Object.getOwnPropertyDescriptor)
 
@@ -97,8 +97,6 @@ Object.getOwnPropertyNames = function getOwnPropertyNames(obj){
     if(obj == window){
         console.log('检测了 ——> Object.getOwnPropertyNames(window)      注意：这里每个网站检测返回的window可能不一样，需要自己修改')
         return [
-            "0",
-            "1",
             "Object",
             "Function",
             "Array",
@@ -986,6 +984,46 @@ Object.getOwnPropertyNames = function getOwnPropertyNames(obj){
             "DeviceMotionEventRotationRate",
             "DeviceOrientationEvent",
             "FederatedCredential",
+            "GPU",
+            "GPUAdapter",
+            "GPUAdapterInfo",
+            "GPUBindGroup",
+            "GPUBindGroupLayout",
+            "GPUBuffer",
+            "GPUBufferUsage",
+            "GPUCanvasContext",
+            "GPUColorWrite",
+            "GPUCommandBuffer",
+            "GPUCommandEncoder",
+            "GPUCompilationInfo",
+            "GPUCompilationMessage",
+            "GPUComputePassEncoder",
+            "GPUComputePipeline",
+            "GPUDevice",
+            "GPUDeviceLostInfo",
+            "GPUError",
+            "GPUExternalTexture",
+            "GPUInternalError",
+            "GPUMapMode",
+            "GPUOutOfMemoryError",
+            "GPUPipelineError",
+            "GPUPipelineLayout",
+            "GPUQuerySet",
+            "GPUQueue",
+            "GPURenderBundle",
+            "GPURenderBundleEncoder",
+            "GPURenderPassEncoder",
+            "GPURenderPipeline",
+            "GPUSampler",
+            "GPUShaderModule",
+            "GPUShaderStage",
+            "GPUSupportedFeatures",
+            "GPUSupportedLimits",
+            "GPUTexture",
+            "GPUTextureUsage",
+            "GPUTextureView",
+            "GPUUncapturedErrorEvent",
+            "GPUValidationError",
             "GravitySensor",
             "Gyroscope",
             "IdleDetector",
@@ -1027,6 +1065,7 @@ Object.getOwnPropertyNames = function getOwnPropertyNames(obj){
             "VideoDecoder",
             "VideoEncoder",
             "VirtualKeyboard",
+            "WGSLLanguageFeatures",
             "WebTransport",
             "WebTransportBidirectionalStream",
             "WebTransportDatagramDuplexStream",
@@ -1060,47 +1099,6 @@ Object.getOwnPropertyNames = function getOwnPropertyNames(obj){
             "FileSystemWritableFileStream",
             "FontData",
             "FragmentDirective",
-            "GPU",
-            "GPUAdapter",
-            "GPUAdapterInfo",
-            "GPUBindGroup",
-            "GPUBindGroupLayout",
-            "GPUBuffer",
-            "GPUBufferUsage",
-            "GPUCanvasContext",
-            "GPUColorWrite",
-            "GPUCommandBuffer",
-            "GPUCommandEncoder",
-            "GPUCompilationInfo",
-            "GPUCompilationMessage",
-            "GPUComputePassEncoder",
-            "GPUComputePipeline",
-            "GPUDevice",
-            "GPUDeviceLostInfo",
-            "GPUError",
-            "GPUExternalTexture",
-            "GPUInternalError",
-            "GPUMapMode",
-            "GPUOutOfMemoryError",
-            "GPUPipelineError",
-            "GPUPipelineLayout",
-            "GPUQuerySet",
-            "GPUQueue",
-            "GPURenderBundle",
-            "GPURenderBundleEncoder",
-            "GPURenderPassEncoder",
-            "GPURenderPipeline",
-            "GPUSampler",
-            "GPUShaderModule",
-            "GPUShaderStage",
-            "GPUSupportedFeatures",
-            "GPUSupportedLimits",
-            "GPUTexture",
-            "GPUTextureUsage",
-            "GPUTextureView",
-            "GPUUncapturedErrorEvent",
-            "GPUValidationError",
-            "WGSLLanguageFeatures",
             "HID",
             "HIDConnectionEvent",
             "HIDDevice",
@@ -1184,6 +1182,7 @@ Object.getOwnPropertyNames = function getOwnPropertyNames(obj){
             "showOpenFilePicker",
             "showSaveFilePicker",
             "originAgentCluster",
+            "onpageswap",
             "onpagereveal",
             "credentialless",
             "speechSynthesis",
@@ -1200,6 +1199,7 @@ Object.getOwnPropertyNames = function getOwnPropertyNames(obj){
             "NavigationActivation",
             "Notification",
             "PageRevealEvent",
+            "PageSwapEvent",
             "PerformanceLongAnimationFrameTiming",
             "PerformanceScriptTiming",
             "PeriodicSyncManager",
@@ -1218,6 +1218,8 @@ Object.getOwnPropertyNames = function getOwnPropertyNames(obj){
             "SpeechSynthesisUtterance",
             "SpeechSynthesisVoice",
             "VideoPlaybackQuality",
+            "WebSocketError",
+            "WebSocketStream",
             "webkitSpeechGrammar",
             "webkitSpeechGrammarList",
             "webkitSpeechRecognition",
@@ -1225,183 +1227,87 @@ Object.getOwnPropertyNames = function getOwnPropertyNames(obj){
             "webkitSpeechRecognitionEvent",
             "webkitRequestFileSystem",
             "webkitResolveLocalFileSystemURL",
-            "staticPath",
-            "_typeof",
-            "customReport",
-            "customSendDataToAPm",
-            "ADDDATA",
-            "APMSDKVERSION",
-            "customItems",
-            "errorInfo",
-            "customReportData",
-            "randomString",
-            "performanceReport",
-            "vueErrorHandler",
-            "_ahrealxhr",
-            "__bl",
+            "point",
+            "vilame_setter",
             "$",
             "jQuery",
-            "dcodeIO",
-            "Paho",
-            "__PROTO_FILE_VAR__",
-            "get_share_datas_from_html_inapp",
+            "setCookieMills",
+            "getCookie",
+            "deleteCookie",
+            "seClick",
+            "appendJSONCookie",
+            "reBook",
+            "fe",
+            "reClick2012",
+            "reClickCube",
+            "mark",
+            "isMeta",
+            "HashMap",
+            "SucInfoMethod",
+            "RecommendTrans",
+            "simpleMold",
+            "complexMold",
+            "loginfo",
+            "isChecked",
+            "funLoad",
+            "Clublog",
+            "getHistory",
+            "privateLogWLJS",
+            "log",
+            "logJSON",
+            "expLogJSON",
+            "fingerprint",
+            "getFingerprint",
+            "Ttracker",
+            "browserRegExp",
+            "JA",
+            "i",
+            "SucInfo_OrderId",
+            "SucInfo_OrderType",
+            "SucInfo_OrderDetail",
             "getQueryString",
-            "_T",
-            "t",
-            "e",
-            "Vue",
-            "VueRouter",
-            "Vuex",
-            "bodymovin",
-            "lottie",
-            "fabric",
-            "jsdom",
-            "virtualWindow",
-            "resizeCanvasIfNeeded",
-            "copyGLTo2DDrawImage",
-            "copyGLTo2DPutImageData",
-            "webpackJsonp",
-            "BossAnalytics",
-            "upp",
-            "BrowserLogger",
-            "__hasInitBlSdk",
+            "ckdw",
+            "isJdvChanged",
+            "postParam",
+            "doubleCookieWhiteList",
+            "pageConfig",
+            "colorApiDomain",
+            "miaoshaRefreshTime",
+            "navitemsHideSwitch",
+            "imageLayerSwitch",
+            "weixin_scheme",
+            "promotional",
+            "backup",
+            "search",
+            "o2",
+            "_",
+            "jmfe",
             "__core-js_shared__",
-            "regeneratorRuntime",
-            "setImmediate",
-            "clearImmediate",
-            "VueScrollTo",
-            "magpie",
-            "flag_offline",
-            "chatStore",
-            "VueStorage",
-            "chat",
-            "ChatWebsocket",
-            "__SVG_SPRITE__",
-            "iGeekRoot",
-            "_PAGE",
-            "systemName",
-            "default",
-            "zpFingerPrint",
-            "DEBUG",
-            "UA",
-            "isIE",
-            "isWebkit",
-            "isZpdesk",
-            "ipcRenderer",
-            "isTouch",
-            "supportsCalcVh",
-            "loadScript",
-            "loadCss",
-            "seriesLoadScripts",
-            "isVisiable",
-            "isEmptyObject",
-            "getQueryObject",
-            "getQueryArray",
-            "Cookie",
-            "cookie",
-            "localStorageInstance",
-            "getUuid",
-            "filterXss",
-            "PAGE_ACTIVITY",
-            "bindObjOutsiteClick",
-            "unbindObjOutsiteClick",
-            "KZ",
-            "explorer",
-            "b_version",
-            "version",
-            "crop",
-            "jconfirm",
-            "Jconfirm",
-            "Utemplate",
-            "Payment",
-            "Purchase",
-            "Recharge",
-            "__conversion",
-            "Salary",
-            "Auxiliary",
-            "Swiper",
-            "isEmpty",
-            "ShowLoginDialog",
-            "placeholderSupport",
-            "PlaceholderCheck",
-            "Report",
-            "Block",
-            "Upgrade",
-            "DirectAccessCard",
-            "Feedback",
-            "zpToken",
-            "SECURITY_SCRIPT_PATH",
-            "GATEWAY_TOKEN_NAME",
-            "GATEWAY_SEED_NAME",
-            "GATEWAY_SCRIPT_NAME",
-            "GATEWAY_TS_NAME",
-            "COOKIE_DOMAIN",
-            "loadGatewayScript",
-            "setGatewayCookie",
-            "isIncludeUrl",
-            "ajaxGetaway",
-            "browser",
-            "AdvantageGptOptimize",
-            "ChangeCityDialog",
-            "BossStartChat",
-            "HomeWebBanner",
-            "__Tween",
-            "__throttle",
-            "EventManger",
-            "EventBus",
-            "myCookie",
-            "getsec",
-            "Search",
-            "Filter",
-            "PositionHistory",
-            "Detail",
-            "strTranslateDom",
-            "Deliver",
-            "Validate",
-            "FormsUI",
-            "ResumeEditor",
-            "Resume",
-            "Attachment",
-            "Guide",
-            "ka_pr",
-            "LOGIN_SOURCE",
-            "LOGIN_SOURCE_URL",
-            "VERRIFYCODETYPE",
-            "CODE_JIYAN_URL",
-            "LOGIN_JIYAN_URL",
-            "ACCOUNT_JIYAN_URL",
-            "CODE_IMG_URL",
-            "LOGIN_IMG_URL",
-            "ACCOUNT_IMG_URL",
-            "CODE_ALI_URL",
-            "LOGIN_ALI_URL",
-            "ACCOUNT_ALI_URL",
-            "CODE_NETEASY_URL",
-            "LOGIN_NETEASY_URL",
-            "ACCOUNT_NETEASY_URL",
-            "VerrifyCode",
-            "filterXssStr",
-            "Sign",
-            "hunterSign",
-            "QuickSign",
-            "Settings",
-            "preview",
-            "isOldCompetitivePage",
-            "text",
-            "ItemShop",
-            "H5bridge",
-            "INTERFACE_URLS",
-            "_AMapSecurityConfig",
-            "IE",
-            "jQueryClickout",
-            "FastSign",
-            "jQuery112108476056641755338",
-            "resumeQueryBar",
-            "AnalysisResume",
-            "VerifyCodeSDK",
-            "OtherPlatformSDK",
-            "headerTools",
-            "aa",
+            "imgLoadTime",
+            "clickReport",
+            "footerRender",
+            "bp_bizid",
+            "eid_jstoken",
+            "_riskFpMode",
+            "jdtRiskContext",
+            "collectConfig",
+            "jdtRiskUtil",
+            "jdtRiskEncryptUtil",
+            "JdtRiskFingerPrint",
+            "jdtRiskCookieManager",
+            "jdtLocalStorageManager",
+            "jdtRiskStorageManager",
+            "TDEnvCollector",
+            "__getTkResult",
+            "__callbackWrapper",
+            "getJsToken",
+            "getJdEid",
+            "SHA256",
+            "_risk_xhr",
+            "__intercept__fetch__",
+            "atobFill",
+            "riskHandlerUtil",
+            "ParamsSign",
             "dir",
             "dirxml",
             "profile",
@@ -1443,6 +1349,13 @@ Object.getOwnPropertyNames = function getOwnPropertyNames(obj){
         ]
     }
 
+    if(obj.byteLength == 2 && obj.byteOffset == 0){
+        console.log('检测了 ——> Object.getOwnPropertyNames(byteOffset),obj是含有byteOffset的一个对象')
+        return ['length', 'byteLength', 'buffer', 'byteOffset']
+    }
+
+
+
     console.log(arguments)
     debugger;
     return catchvm.memory.getOwnPropertyNames(obj)
@@ -1465,6 +1378,16 @@ Object.hasOwn = function hasOwn(obj, prop){
 };catchvm.func_set_natvie(Object.hasOwn)
 
 
+catchvm.memory.hasOwnProperty = Object.hasOwnProperty
+Object.hasOwnProperty = function hasOwnProperty(prop){
+    console.log(arguments)
+    debugger;
+    return catchvm.memory.hasOwnProperty(prop)
+};catchvm.func_set_natvie(Object.hasOwnProperty)
+
+
+
+
 catchvm.memory.isExtensible = Object.isExtensible
 Object.isExtensible = function isExtensible(obj){
     console.log(arguments)
@@ -1483,6 +1406,30 @@ Object.isSealed = function isSealed(obj){
 
 catchvm.memory.keys = Object.keys
 Object.keys = function keys(obj){
+    if(obj.toString === undefined){
+        // debugger;
+        return catchvm.memory.keys(obj)
+    }
+
+    // if(obj.RESERVED_PARAM_NAMES && obj.RESERVED_PARAM_NAMES[0] == "h5st"){
+    //     return catchvm.memory.keys(obj)
+    // }
+    // if(obj.requestAlgorithm){
+    //     return catchvm.memory.keys(obj)
+    // }
+    // if(obj.__JS_SECURITY_BUCKET_INDEX && obj.__JS_SECURITY_VERSION){
+    //     return catchvm.memory.keys(obj)
+    // }
+    // if(obj.setReadOnlyProperty && obj.isPlainObject){
+    //     return catchvm.memory.keys(obj)
+    // }
+    // if(obj.unix && obj.getRandomTimestamp){
+    //     return catchvm.memory.keys(obj)
+    // }
+
+
+    
+
     if(obj.toString().indexOf('HTMLDocument') != -1){
         console.log('检测了 ——> Object.keys(HTMLDocument)')
         return []

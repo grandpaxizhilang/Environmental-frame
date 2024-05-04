@@ -31,6 +31,11 @@ URL.createObjectURL = function createObjectURL(object){
     return room[Math.floor(Math.random() * room.length)];
 };catchvm.func_set_natvie(URL.createObjectURL);
 
+
+
+
+
+
 ///////////////////////////////////////////////////////////////
 
 catchvm.memory.URL = function(url){

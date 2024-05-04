@@ -14,9 +14,10 @@ HTMLHeadElement.prototype.__proto__ = HTMLElement.prototype;
 catchvm.memory.HTMLElements['head'] = function(){
     var head = new(function(){});
     ///////////////////////////////////////////////
-    head.tagName = 'head'.toUpperCase()
-    head.childelement = []
-    head.father_element = null
+    head.tagName = 'head'.toUpperCase();
+    head.childelement = [];
+    head.father_element = null;
+    head.childElementCount = 46
 
     ///////////////////////////////////////////////
     head.__proto__ = HTMLHeadElement.prototype;

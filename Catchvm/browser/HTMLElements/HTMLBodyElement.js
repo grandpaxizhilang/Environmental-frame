@@ -17,6 +17,8 @@ catchvm.memory.HTMLElements['body'] = function(){
     body.tagName = 'body'.toUpperCase()
     body.childelement = []
     body.father_element = null
+    body.clientHeight = 726
+    body.clientWidth = 1472
 
     HTMLBodyElement.prototype.aLink = ''
     HTMLBodyElement.prototype.background = ''
