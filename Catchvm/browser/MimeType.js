@@ -36,3 +36,18 @@ catchvm.memory.MimeType.new = function (data,plugin){
     mimeType.__proto__ = MimeType.prototype;
     return mimeType;
 };
+
+///////////////////////////////////////////////////////////////
+MimeType.prototype.__defineGetter__("description",function(){
+    throw TypeError("Illegal invocation")
+})
+MimeType.prototype.__defineGetter__("suffixes",function(){
+    throw TypeError("Illegal invocation")
+})
+MimeType.prototype.__defineGetter__("type",function(){
+    throw TypeError("Illegal invocation")
+})
+MimeType.prototype.__defineGetter__("enabledPlugin",function(){
+    throw TypeError("Illegal invocation")
+})
+

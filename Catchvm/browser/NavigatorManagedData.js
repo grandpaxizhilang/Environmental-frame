@@ -16,3 +16,8 @@ NavigatorManagedData.prototype.__proto__ = EventTarget.prototype
 catchvm.memory.managed = {}
 catchvm.memory.managed.__proto__ = NavigatorManagedData.prototype
 catchvm.memory.managed = catchvm.proxy(catchvm.memory.managed)
+
+///////////////////////////////////////////////////////////////
+NavigatorManagedData.prototype.__defineGetter__("onmanagedconfigurationchange",function(){
+    throw TypeError("Illegal invocation")
+})

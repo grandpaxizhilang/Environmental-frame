@@ -69,20 +69,16 @@ Node.prototype.removeChild = function removeChild(Child){
 };catchvm.func_set_natvie(Node.prototype.removeChild)
 
 
+///////////////////////////////////////////////////////////////
 
-
-// for (var property_ in Node.prototype) {
-//     if(!(typeof Node.prototype[property_] === 'function')){       
-//         Node.prototype.__defineGetter__(property_, function () {
-//             throw new TypeError("Illegal invocation");
-//         });
-//     }  
-// }
-
+Node.prototype.__proto__ = EventTarget.prototype;
 
 ///////////////////////////////////////////////////////////////
 
 
-Node.prototype.__proto__ = EventTarget.prototype;
-
-
+Node.prototype.__defineGetter__("ATTRIBUTE_NODE",function(){
+    throw TypeError("Illegal invocation")
+})
+Node.prototype.__defineGetter__("parentNode",function(){
+    throw TypeError("Illegal invocation")
+})

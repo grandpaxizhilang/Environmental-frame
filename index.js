@@ -16,7 +16,7 @@ catchvm.AddPlugin({description:"Portable Document Format" ,filename:"internal-pd
 `); 
 
 
-const codefile = `${__dirname}/code.js`;
+const codefile = `${__dirname}/test.js`;
 const vm = new VM();
 const script = new VMScript(catchvmcode + fs.readFileSync(codefile),`${__dirname}/NOWDEBUG.js`);
 debugger;

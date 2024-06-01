@@ -34,5 +34,32 @@ for (var property_ in Screen.prototype) {
 
 ///////////////////////////////////////////////////////////////
 
-
 screen = catchvm.proxy(screen);
+
+///////////////////////////////////////////////////////////////
+Screen.prototype.__defineGetter__("availHeight",function(){
+    throw TypeError("Illegal invocation")
+})
+Screen.prototype.__defineGetter__("availWidth",function(){
+    throw TypeError("Illegal invocation")
+})
+Screen.prototype.__defineGetter__("availLeft",function(){
+    throw TypeError("Illegal invocation")
+})
+Screen.prototype.__defineGetter__("availTop",function(){
+    throw TypeError("Illegal invocation")
+})
+Screen.prototype.__defineGetter__("width",function(){
+    throw TypeError("Illegal invocation")
+})
+Screen.prototype.__defineGetter__("height",function(){
+    throw TypeError("Illegal invocation")
+})
+Screen.prototype.__defineGetter__("colorDepth",function(){
+    throw TypeError("Illegal invocation")
+})
+Screen.prototype.__defineGetter__("pixelDepth",function(){
+    throw TypeError("Illegal invocation")
+})
+
+

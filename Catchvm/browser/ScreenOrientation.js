@@ -19,3 +19,16 @@ catchvm.memory.orientation = {}
 catchvm.memory.orientation.__proto__ = ScreenOrientation.prototype
 catchvm.memory.orientation = catchvm.proxy(catchvm.memory.orientation)
 
+///////////////////////////////////////////////////////////////
+ScreenOrientation.prototype.__defineGetter__("angle",function(){
+    throw TypeError("Illegal invocation")
+})
+ScreenOrientation.prototype.__defineGetter__("onchange",function(){
+    throw TypeError("Illegal invocation")
+})
+ScreenOrientation.prototype.__defineGetter__("type",function(){
+    throw TypeError("Illegal invocation")
+})
+
+
+

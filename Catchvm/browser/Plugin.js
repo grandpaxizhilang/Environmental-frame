@@ -90,8 +90,19 @@ catchvm.memory.plugin.new = function (data){
 }
 
 
-
-
+///////////////////////////////////////////////////////////////
+Plugin.prototype.__defineGetter__("description",function(){
+    throw TypeError("Illegal invocation")
+})
+Plugin.prototype.__defineGetter__("filename",function(){
+    throw TypeError("Illegal invocation")
+})
+Plugin.prototype.__defineGetter__("length",function(){
+    throw TypeError("Illegal invocation")
+})
+Plugin.prototype.__defineGetter__("name",function(){
+    throw TypeError("Illegal invocation")
+})
 
 
 

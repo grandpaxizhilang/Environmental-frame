@@ -50,10 +50,6 @@ MimeTypeArray.prototype.namedItem = function namedItemem(key){
     return this[key];
 };catchvm.func_set_natvie(MimeTypeArray.prototype.namedItem)
 
-MimeTypeArray.prototype.__defineGetter__('length', function () {
-    throw new TypeError("Illegal invocation");
-});
-
 ///////////////////////////////////////////////////////////////
 
 catchvm.memory.MimeTypeArray._ = {};
@@ -78,4 +74,7 @@ if(catchvm.memory.PluginArray._ != undefined){
 catchvm.memory.MimeTypeArray._.__proto__ = MimeTypeArray.prototype
 catchvm.memory.MimeTypeArray._ =  catchvm.proxy(catchvm.memory.MimeTypeArray._);
 
-
+///////////////////////////////////////////////////////////////
+MimeTypeArray.prototype.__defineGetter__('length', function () {
+    throw new TypeError("Illegal invocation");
+});

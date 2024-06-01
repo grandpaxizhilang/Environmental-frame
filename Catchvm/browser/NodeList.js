@@ -16,10 +16,14 @@ NodeList.prototype.keys = function keys(){debugger;};catchvm.func_set_natvie(Nod
 NodeList.prototype.values = function values(){debugger;};catchvm.func_set_natvie(NodeList.prototype.values)
 
 ///////////////////////////////////////////////////////////////
+
 nodelist = [];
 nodelist.__proto__ = NodeList.prototype;
 
 nodelist = catchvm.proxy(nodelist);
 
-
+///////////////////////////////////////////////////////////////
+NodeList.prototype.__defineGetter__("length",function(){
+    throw TypeError("Illegal invocation")
+})
 

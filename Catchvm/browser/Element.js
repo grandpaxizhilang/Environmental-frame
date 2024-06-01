@@ -15,7 +15,6 @@ Element.prototype.attributes = catchvm.memory.namedNodeMap
 
 
 
-
 Element.prototype.getElementsByTagName = function getElementsByTagName(tagName){
     
     console.log(arguments)
@@ -38,4 +37,16 @@ Element.prototype.remove = function remove(){
 ///////////////////////////////////////////////////////////////
 
 Element.prototype.__proto__ = Node.prototype;
+
+
+///////////////////////////////////////////////////////////////
+Element.prototype.__defineGetter__("tagName",function(){
+    throw TypeError("Illegal invocation")
+})
+Element.prototype.__defineGetter__("classList",function(){
+    throw TypeError("Illegal invocation")
+})
+Element.prototype.__defineGetter__("attributes",function(){
+    throw TypeError("Illegal invocation")
+})
 

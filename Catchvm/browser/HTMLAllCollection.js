@@ -16,3 +16,8 @@ HTMLAllCollection.prototype.length = 0
 catchvm.memory.htmlAllCollection = {}
 catchvm.memory.htmlAllCollection.__proto__ = HTMLAllCollection.prototype
 catchvm.memory.htmlAllCollection = catchvm.proxy(catchvm.memory.htmlAllCollection)
+
+///////////////////////////////////////////////////////////////
+HTMLAllCollection.prototype.__defineGetter__("length",function(){
+    throw TypeError("Illegal invocation")
+})

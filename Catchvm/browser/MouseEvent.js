@@ -39,3 +39,16 @@ catchvm.memory.Events['mouseevents'] = function(type){
     return catchvm.memory.Events['mouseevent'](type);
 };
 
+///////////////////////////////////////////////////////////////
+MouseEvent.prototype.__defineGetter__("screenX",function(){
+    throw TypeError("Illegal invocation")
+})
+MouseEvent.prototype.__defineGetter__("screenY",function(){
+    throw TypeError("Illegal invocation")
+})
+MouseEvent.prototype.__defineGetter__("clientX",function(){
+    throw TypeError("Illegal invocation")
+})
+MouseEvent.prototype.__defineGetter__("clientY",function(){
+    throw TypeError("Illegal invocation")
+})

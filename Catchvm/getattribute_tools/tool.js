@@ -27,3 +27,13 @@ function getcode(pr,name_){
 }
 
 
+
+
+// 获取原型的属性
+code =''
+for (var fo in navigator.__proto__){
+    if(typeof navigator[fo] !== 'function'){
+        code += 'Navigator.prototype.__defineGetter__("' + fo +'",function(){\n\tthrow TypeError("Illegal invocation")\n})\n' 
+    }
+}
+console.log(code)

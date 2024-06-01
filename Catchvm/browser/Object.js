@@ -1,5 +1,8 @@
-//冻结navigator防止修改值
-Object.freeze(navigator)
+//冻结navigator、document。location防止修改值
+Object.freeze(navigator);
+Object.freeze(document);
+Object.freeze(location);
+
 
 catchvm.memory.isFrozen = Object.isFrozen
 Object.isFrozen = function isFrozen(obj){
@@ -1675,6 +1678,7 @@ Object.keys = function keys(obj){
             "fragmentDirective",
             "hasPrivateToken",
             "hasRedemptionRecord",
+            "hasUnpartitionedCookieAccess",
             "onscrollend"
         ]
     }
@@ -2105,6 +2109,67 @@ Object.keys = function keys(obj){
             "aa"
         ]
     }
+    if(obj == Node.prototype){
+        console.log('检测了 ——> Object.keys(Node.prototype)')
+        return [
+            "nodeType",
+            "nodeName",
+            "baseURI",
+            "isConnected",
+            "ownerDocument",
+            "parentNode",
+            "parentElement",
+            "childNodes",
+            "firstChild",
+            "lastChild",
+            "previousSibling",
+            "nextSibling",
+            "nodeValue",
+            "textContent",
+            "ELEMENT_NODE",
+            "ATTRIBUTE_NODE",
+            "TEXT_NODE",
+            "CDATA_SECTION_NODE",
+            "ENTITY_REFERENCE_NODE",
+            "ENTITY_NODE",
+            "PROCESSING_INSTRUCTION_NODE",
+            "COMMENT_NODE",
+            "DOCUMENT_NODE",
+            "DOCUMENT_TYPE_NODE",
+            "DOCUMENT_FRAGMENT_NODE",
+            "NOTATION_NODE",
+            "DOCUMENT_POSITION_DISCONNECTED",
+            "DOCUMENT_POSITION_PRECEDING",
+            "DOCUMENT_POSITION_FOLLOWING",
+            "DOCUMENT_POSITION_CONTAINS",
+            "DOCUMENT_POSITION_CONTAINED_BY",
+            "DOCUMENT_POSITION_IMPLEMENTATION_SPECIFIC",
+            "appendChild",
+            "cloneNode",
+            "compareDocumentPosition",
+            "contains",
+            "getRootNode",
+            "hasChildNodes",
+            "insertBefore",
+            "isDefaultNamespace",
+            "isEqualNode",
+            "isSameNode",
+            "lookupNamespaceURI",
+            "lookupPrefix",
+            "normalize",
+            "removeChild",
+            "replaceChild"
+        ]
+    }
+    if(obj == EventTarget.prototype){
+        console.log('检测了 ——> Object.keys(EventTarget.prototype)')
+        return [
+            "addEventListener",
+            "dispatchEvent",
+            "removeEventListener"
+        ]
+    }
+
 
 
     console.log(arguments)

@@ -46,7 +46,4 @@ EventTarget.prototype.removeEventListener = function removeEventListener(type,ca
     }
 };catchvm.func_set_natvie(EventTarget.prototype.removeEventListener);
 
-
-
-
 ///////////////////////////////////////////////////////////////

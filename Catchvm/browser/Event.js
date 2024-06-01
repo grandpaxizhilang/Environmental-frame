@@ -21,15 +21,6 @@ Event.prototype.CAPTURING_PHASE = 1;
 Event.prototype.NONE = 1;
 
 
-
-for (let temp in Event.prototype) {
-    if(!(typeof Event.prototype[temp] === 'function') && temp.toLowerCase() === temp){       
-        Event.prototype.__defineGetter__(temp, function () {
-            throw new TypeError("Illegal invocation");
-        });
-    }  
-}
-
 ///////////////////////////////////////////////////////////////
 
 catchvm.memory.Events['event'] = function(type){
@@ -52,3 +43,32 @@ catchvm.memory.Events['event'] = function(type){
 catchvm.memory.Events['events'] = function(type){
     return catchvm.memory.Events['event'](type);
 };
+
+
+
+///////////////////////////////////////////////////////////////
+Event.prototype.__defineGetter__("type",function(){
+    throw TypeError("Illegal invocation")
+})
+Event.prototype.__defineGetter__("bubbles",function(){
+    throw TypeError("Illegal invocation")
+})
+Event.prototype.__defineGetter__("cancelable",function(){
+    throw TypeError("Illegal invocation")
+})
+Event.prototype.__defineGetter__("composed",function(){
+    throw TypeError("Illegal invocation")
+})
+Event.prototype.__defineGetter__("AT_TARGET",function(){
+    throw TypeError("Illegal invocation")
+})
+Event.prototype.__defineGetter__("BUBBLING_PHASE",function(){
+    throw TypeError("Illegal invocation")
+})
+Event.prototype.__defineGetter__("CAPTURING_PHASE",function(){
+    throw TypeError("Illegal invocation")
+})
+Event.prototype.__defineGetter__("NONE",function(){
+    throw TypeError("Illegal invocation")
+})
+

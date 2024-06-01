@@ -14,10 +14,10 @@ Navigator.prototype.mimeTypes = catchvm.memory.MimeTypeArray._;
 Navigator.prototype.mediaDevices = catchvm.memory.mediaDevices;
 Navigator.prototype.language = "zh-CN";
 Navigator.prototype.languages = ["zh-CN","en","en-GB","en-US"];
-Navigator.prototype.userAgent = ''
+Navigator.prototype.userAgent = 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/122.0.0.0 Safari/537.36 Edg/122.0.0.0'
 Navigator.prototype.vendor = 'Google Inc.'
 Navigator.prototype.appName = 'Netscape';
-Navigator.prototype.appVersion = ''
+Navigator.prototype.appVersion = '5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/123.0.0.0 Safari/537.36 Edg/123.0.0.0'
 Navigator.prototype.cookieEnabled = true;
 Navigator.prototype.deviceMemory = 8;
 Navigator.prototype.maxTouchPoints = 0;
@@ -152,4 +152,157 @@ for (let temp in Navigator.prototype) {
 navigator = catchvm.proxy(navigator);
 
 
-
+///////////////////////////////////////////////////////////////
+Navigator.prototype.__defineGetter__("webdriver",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("plugins",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("mimeTypes",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("mediaDevices",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("language",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("languages",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("userAgent",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("vendor",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("appName",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("appVersion",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("cookieEnabled",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("deviceMemory",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("maxTouchPoints",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("doNotTrack",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("productSub",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("vendorSub",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("pdfViewerEnabled",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("appCodeName",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("onLine",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("scheduling",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("userActivation",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("geolocation",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("connection",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("bluetooth",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("clipboard",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("credentials",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("keyboard",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("managed",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("storage",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("serviceWorker",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("virtualKeyboard",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("wakeLock",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("ink",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("hid",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("locks",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("mediaCapabilities",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("mediaSession",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("permissions",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("presentation",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("serial",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("gpu",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("usb",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("windowControlsOverlay",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("xr",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("userAgentData",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("vendorSubs",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("hardwareConcurrency",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("platform",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("product",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("webkitTemporaryStorage",function(){
+	throw TypeError("Illegal invocation")
+})
+Navigator.prototype.__defineGetter__("webkitPersistentStorage",function(){
+	throw TypeError("Illegal invocation")
+})

@@ -35,3 +35,23 @@ performance = {}
 performance.__proto__ = Performance.prototype
 performance = catchvm.proxy(performance)
 
+///////////////////////////////////////////////////////////////
+Performance.prototype.__defineGetter__("eventCounts",function(){
+    throw TypeError("Illegal invocation")
+})
+Performance.prototype.__defineGetter__("memory",function(){
+    throw TypeError("Illegal invocation")
+})
+Performance.prototype.__defineGetter__("navigation",function(){
+    throw TypeError("Illegal invocation")
+})
+Performance.prototype.__defineGetter__("onresourcetimingbufferfull",function(){
+    throw TypeError("Illegal invocation")
+})
+Performance.prototype.__defineGetter__("timeOrigin",function(){
+    throw TypeError("Illegal invocation")
+})
+Performance.prototype.__defineGetter__("timing",function(){
+    throw TypeError("Illegal invocation")
+})
+

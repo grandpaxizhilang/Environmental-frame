@@ -84,3 +84,8 @@ if(catchvm.memory.PluginArray.temp != undefined){
 catchvm.memory.PluginArray._.__proto__ = PluginArray.prototype;
 catchvm.memory.PluginArray._ =  catchvm.proxy(catchvm.memory.PluginArray._);
 
+///////////////////////////////////////////////////////////////
+PluginArray.prototype.__defineGetter__("length",function(){
+    throw TypeError("Illegal invocation")
+})
+
