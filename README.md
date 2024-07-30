@@ -62,6 +62,43 @@
 
 - 补充了常用接口对于原型上的获取会报错的问题
 
+### 2024-07-30
+
+- 增加了有关标签的检测，检测代码如下：
+
+```javascript
+    function test_action() {
+        let form = document.createElement("form");
+        let input1 = document.createElement("input");
+        input1.id = "username";
+        input1.content = "action";
+        input1.name = "action";
+        form.appendChild(input1);
+        let input2 = document.createElement("input");
+        input2.name = "textContent";
+        input2.id = "password";
+        form.appendChild(input2);
+        let input3 = document.createElement("input");
+        input3.id = "innerText";
+        input3.type = "submit";
+        input3.name = "id";
+        form.appendChild(input3);
+        a = form.action;
+        b = form.textContent;
+        c = form.id;
+        d = form.innerText;
+        form.id='yq'
+        form.name='yqName'
+        document.body.appendChild(form)
+        
+        if (a.name == 'action' && a.id == 'username' && b.name == 'textContent' && b.id == 'password' && c.id == "innerText" && c.name == 'id' && d.id == 'innerText' && d.name == 'id' &&globalThis.yq==form &&globalThis.yqName==form) {
+            console.log(`test_action 检测通过`)
+        } else {
+            console.log(`test_action 可以被检测`);
+```
+
+
+
 # 目前存在的问题
 
 - 大部分接口中对于原型上的获取会报错的问题没有实现
