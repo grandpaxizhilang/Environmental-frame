@@ -94,7 +94,7 @@
         if (a.name == 'action' && a.id == 'username' && b.name == 'textContent' && b.id == 'password' && c.id == "innerText" && c.name == 'id' && d.id == 'innerText' && d.name == 'id' &&globalThis.yq==form &&globalThis.yqName==form) {
             console.log(`test_action 检测通过`)
         } else {
-            console.log(`test_action 可以被检测`);
+            console.log(`test_action 被检测`);
 ```
 
 
