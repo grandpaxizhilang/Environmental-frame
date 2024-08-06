@@ -14,8 +14,8 @@ location.__proto__ = Location.prototype;
 
 location.href = 'https://www.nmpa.gov.cn/'
 location.port = ''
-location.hostname = 'www.nmpa.gov.cn'
-location.host = 'www.nmpa.gov.cn'
+location.hostname = "www.xiaohongshu.com"
+location.host = "www.xiaohongshu.com"
 location.protocol = 'https:'
 location.search = ''
 location.origin = 'https://www.nmpa.gov.cn'

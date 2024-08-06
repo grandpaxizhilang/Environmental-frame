@@ -1437,7 +1437,7 @@ Object.keys = function keys(obj){
         return []
     }
     if(obj === Document.prototype){
-        console.log('检测了 ——> Object.keys(Document.prototype)')
+        console.log('检测了 ——> Object.keys(Document.prototype) ———— 注意需要根据不同网站进行更改')
         return [
             "implementation",
             "URL",
@@ -1655,6 +1655,7 @@ Object.keys = function keys(obj){
             "getSelection",
             "hasFocus",
             "hasStorageAccess",
+            "hasUnpartitionedCookieAccess",
             "importNode",
             "open",
             "prepend",
@@ -1675,9 +1676,9 @@ Object.keys = function keys(obj){
             "write",
             "writeln",
             "fragmentDirective",
+            "browsingTopics",
             "hasPrivateToken",
             "hasRedemptionRecord",
-            "hasUnpartitionedCookieAccess",
             "onscrollend"
         ]
     }
@@ -1702,7 +1703,7 @@ Object.keys = function keys(obj){
         ]
     }
     if(obj == window){
-        console.log('检测了 ——> Object.keys(window)')
+        console.log('检测了 ——> Object.keys(window) ———— 注意需要根据不同网站进行更改')
         return [
             "0",
             "1",
@@ -2109,7 +2110,7 @@ Object.keys = function keys(obj){
         ]
     }
     if(obj == Node.prototype){
-        console.log('检测了 ——> Object.keys(Node.prototype)')
+        console.log('检测了 ——> Object.keys(Node.prototype)  ———— 注意需要根据不同网站进行更改')
         return [
             "nodeType",
             "nodeName",
@@ -2168,7 +2169,6 @@ Object.keys = function keys(obj){
             "removeEventListener"
         ]
     }
-
 
 
     console.log(arguments)

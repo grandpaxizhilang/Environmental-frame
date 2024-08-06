@@ -37,13 +37,15 @@ Element.prototype.getElementsByTagName = function getElementsByTagName(tagName){
 
 Element.prototype.getAttribute = function getAttribute(attributeName){
     console.log('执行了element.getAttribute --->'+attributeName)
-    debugger;
-    if (attributeName == 'r'){
-        return 'm'
-    }
-
     console.log(arguments)
     debugger;
+    if (attributeName == 'r'){
+        return 'm';
+    }
+    if (attributeName == 'selenium' || attributeName == 'webdriver' || attributeName == 'driver'){
+        return null;
+    }
+
     return null;
 };catchvm.func_set_natvie(Element.prototype.getAttribute)
 

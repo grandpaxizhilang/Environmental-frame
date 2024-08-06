@@ -17,10 +17,9 @@ Node.prototype.appendChild = function appendChild(aChild){
     console.log('执行了appendChild --->'+aChild)
     debugger;
 
-    if(aChild.tagName == 'DIV'){
-        aChild.offsetHeight = 20
+    if(aChild.style.height !== ''){
+        aChild.offsetHeight = parseInt(aChild.style.height.replace('px',''))
     }
-
     console.log(arguments)
 
 

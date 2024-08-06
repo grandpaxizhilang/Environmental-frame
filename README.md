@@ -97,6 +97,29 @@
             console.log(`test_action 被检测`);
 ```
 
+### 2024-08-06
+
+- 补充了一些接口的方法和属性
+- 优化了部分方法的代码逻辑
+- 使用插件解决`typeof(document.all)`为undefined的问题,J检测代码如下：
+
+``` js
+var text = document.all;
+if(text != undefined){
+    console.log('被1检测到')
+}else if(text.length == 0){
+    console.log('被2检测到')
+}
+else if(text.toString() != '[object HTMLAllcollection]'){
+    console.log('被3检测到')
+}else if(text.toString.toString() != "function toString() { [native code] }"){
+    console.log('被4检测到')
+}else
+    console.log('通过了document.all检测!!!')
+
+console.log(text)
+```
+
 
 
 # 目前存在的问题
@@ -109,7 +132,7 @@
 
 - 接口中输入错误的参数产生的报错输出( 比如new一个对象没有传入参数的报错 )
 
-- document.all的检测还没过
+- document.all的检测还没过  —— 已解决
 
 - 有些属性或者方法的定义在window作用域里面，放到内存中才是正确的做法
 

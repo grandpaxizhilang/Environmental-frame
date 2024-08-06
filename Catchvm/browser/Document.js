@@ -7,9 +7,9 @@ Object.defineProperties(Document.prototype, {
         configurable: true
     }
 });
-///////////////////////////////////////////////////////////////
+/////////////////////////////////////////////////////////////////////
 Document.prototype.URL = ''
-Document.prototype.cookie = ''
+Document.prototype.cookie = 'abRequestId=46a9217c-b10b-5524-a6de-836795116479; webBuild=4.28.3; xsecappid=xhs-pc-web; a1=1911c39c2131adxh03kz55nj5glpcb3cc95jf7in050000155799; webId=b4a88c9270368a14242affaceb42faa6; gid=yjyySqjSS2SKyjyySqjSJjW3yqy0fCx8qTu22I82IV2k1V28USDqSi888y22Wjj8KD08WSi8; unread={%22ub%22:%2266a71df7000000000503b8a0%22%2C%22ue%22:%2266a70e46000000000d030cde%22%2C%22uc%22:29}; websectiga=cf46039d1971c7b9a650d87269f31ac8fe3bf71d61ebf9d9a0a87efb414b816c; sec_poison_id=b4ec967d-3695-4eda-98a0-5d256fb39d39'
 Document.prototype.referrer = 'https://www.nmpa.gov.cn/'
 Document.prototype.documentElement = catchvm.proxy(catchvm.memory.HTMLElements['html']())
 Document.prototype.body = catchvm.proxy(catchvm.memory.HTMLElements['body']())
@@ -19,16 +19,26 @@ Document.prototype.charset = 'UTF-8'
 Document.prototype.visibilityState = 'visible'
 
 
-Document.prototype.all = catchvm.memory.htmlAllCollection
+//////////////////////document.all//////////////////////
+console.log('进入')
+Document.prototype.all = documentall.DocumentAll()
+Document.prototype.all.length = 3
+Object.defineProperties(Document.prototype.all, {
+    [Symbol.toStringTag]: {
+        value: "HTMLAllCollection",
+        configurable: true
+    }
+});
+console.log('退出')
+//////////////////////document.all//////////////////////
 
-// catchvm.memory.documentcount = 0
-// Object.defineProperty(Document.prototype, "all", {
-//     get: function (){
-//         return [undefined, undefined, catchvm.memory.htmlAllCollection][catchvm.memory.documentcount++]
-//     }
-// })
 
 
+
+Document.prototype.hasUnpartitionedCookieAccess = function hasUnpartitionedCookieAccess(){
+    console.log(arguments);
+    debugger;
+};catchvm.func_set_natvie(Document.prototype.hasUnpartitionedCookieAccess);
 
 Document.prototype.createExpression = function createExpression(){
     console.log(arguments)
